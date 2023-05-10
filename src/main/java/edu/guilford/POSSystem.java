@@ -2,10 +2,10 @@ package edu.guilford;
 
 public class POSSystem {
 
-    public void removeItem(MenuItem item) {
+    public void removeItem(javafx.scene.control.MenuItem item) {
     }
 
-    public void addItem(MenuItem item) {
+    public void addItem(javafx.scene.control.MenuItem item) {
     }
 
     public double processPayment(double payment) {

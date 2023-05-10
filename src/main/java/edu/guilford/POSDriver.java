@@ -1,9 +1,13 @@
 package edu.guilford;
-
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.TextField;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -35,17 +39,17 @@ public class POSDriver extends Application {
         MenuBar menuBar = new MenuBar();
         Menu fileMenu = new Menu(bundle.getString("menu.file"));
         MenuItem exitMenuItem = new MenuItem(bundle.getString("menu.file.exit"));
-        exitMenuItem.setOnAction(event -> System.exit(0));
+        exitMenuItem.setOnAction(event -> stage.close()); 
         fileMenu.getItems().add(exitMenuItem);
         menuBar.getMenus().add(fileMenu);
 
         // Create the left side panel with the menu items
         VBox menuPanel = new VBox();
-        for (MenuItem item : menu.getItems()) {
+        for (javafx.scene.control.MenuItem item : menu.getItems()) {
             Button addButton = new Button("+");
             Button removeButton = new Button("-");
-            Label nameLabel = new Label(item.getName());
-            Label priceLabel = new Label(String.format("%.2f", item.getPrice()));
+            Label nameLabel = new Label(item.getStyle());
+            Label priceLabel = new Label(String.format("%.2f", ((MenuItem) item).getPrice()));
             HBox itemBox = new HBox(addButton, removeButton, nameLabel, priceLabel);
             itemBox.setSpacing(10);
             addButton.setOnAction(event -> {

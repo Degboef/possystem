@@ -193,7 +193,7 @@ private static void launch(String[] args) {
 }
 }
 
-class MenuItem {
+public class MenuItem {
 private String name;
 private double price;
 public MenuItem(String name, double price) {
@@ -217,20 +217,31 @@ public String toString() {
     return name + " - $" + String.format("%.2f", price);
 }
 
-public void setOnAction(Object object) {
+public void setOnAction1(Object object) {
+    // Method implementation 1
 }
 
-public void setOnAction(Object object) {
+public void setOnAction2(Object object) {
+    // Method implementation 2
 }
 
-public void setOnAction(Object object) {
+public void setOnAction3(Object object) {
+    // Method implementation 3
 }
 
-public void setOnAction(Object object) {
+public void setOnAction4(Object object) {
+    // Method implementation 4
+}
+
+public void setOnAction5(Object object) {
+    // Method implementation 5
+}
+
+public void setOnAction3(Object object) {
 }
 }
 
-class Menu {
+public class Menu {
 private ArrayList<MenuItem> items;
 public Menu() {
     items = new ArrayList<>();
