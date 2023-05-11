@@ -185,6 +185,24 @@ private void showReceipt(String paymentType, double amount, double change) {
     receiptStage.show();
 }
 
+@Override
+    public void start(Stage primaryStage) {
+        // Create an instance of the main GUI class
+        main gui = new main(menu);
+
+        // Create the scene with the GUI layout
+        Scene scene = new Scene(gui, 800, 600);
+
+        // Set the scene to the primary stage
+        primaryStage.setScene(scene);
+
+        // Set the stage title
+        primaryStage.setTitle("GUI Example");
+
+        // Show the stage
+        primaryStage.show();
+    }
+
 public static void main(String[] args) {
     launch(args);
 }
