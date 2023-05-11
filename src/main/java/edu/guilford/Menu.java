@@ -16,6 +16,9 @@ public class Menu {
         addItem("Soft Drink", 1.99);
     }
     
+    public Menu(String string) {
+    }
+
     public List<MenuItem> getItems() {
         return items;
     }
@@ -48,7 +51,10 @@ class MenuItem {
         this.price = price;
     }
     
-    public String getName() {
+    public MenuItem(String string) {
+	}
+
+	public String getName() {
         return name;
     }
     
