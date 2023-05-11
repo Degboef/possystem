@@ -6,7 +6,7 @@ import java.util.List;
 public class Menu {
     private List<MenuItem> items;
     
-    public Menu() {
+    Menu() {
         items = new ArrayList<>();
         // Add some sample menu items
         addItem("Hamburger", 4.99);
